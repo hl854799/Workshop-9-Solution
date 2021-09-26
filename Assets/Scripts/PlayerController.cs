@@ -42,4 +42,8 @@ public class PlayerController : MonoBehaviour {
             p.velocity = (fireToWorldPos - this.transform.position).normalized * 10.0f;
         }
     }
+
+    public void DestroyMe(){
+        Destroy(this.gameObject);
+    }
 }

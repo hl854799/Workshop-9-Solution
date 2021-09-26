@@ -30,11 +30,13 @@ public class InGameController : MonoBehaviour {
 
     void Update ()
     {
-        // Update score text field
-        this.scoreText.text = "Score: " + this.scoreManager.score;
+        if (player != null){
+            // Update score text field
+            this.scoreText.text = "Score: " + this.scoreManager.score;
 
-        // Update health text field (possible extension exercise)
-        this.healthText.text = "Shields: " + player.GetComponent<HealthManager>().GetHealth() + "%";
+            // Update health text field (possible extension exercise)
+            this.healthText.text = "Shields: " + player.GetComponent<HealthManager>().GetHealth() + "%";
+        }
     }
 
     // Called when the game should be ended
